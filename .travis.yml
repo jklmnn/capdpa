@@ -1,0 +1,14 @@
+sudo: required
+dist: trusty
+addons:
+    apt:
+        update: true
+        packages:
+            - python-clang
+            - libclang-dev
+language: python
+python:
+  - "2.7"
+cache: pip
+script:
+  - python -m unittest discover tests
